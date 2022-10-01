@@ -1,0 +1,75 @@
+.section--carousel-hero {
+  background-color: var(--clr-yellow);
+  border-bottom: 4px solid var(--clr-black);
+  padding: 82px 0 20px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .section--carousel-hero {
+    padding-top: 58px;
+  }
+}
+
+/* the slides */
+.slick-slide {
+  padding-left: 10px;
+  user-select: none;
+}
+
+.link-container {
+  max-width: 620px;
+  width: 50%;
+  position: relative;
+  user-select: none;
+}
+.side-link {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.section--carousel-hero .hover-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 12px 24px 10px;
+  border-radius: 70px;
+  background-color: var(--clr-white);
+  font-size: 1.5em;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 30;
+}
+
+@media (max-width: 992px) {
+  .section--carousel-hero .hover-text {
+    font-size: 0.875em;
+  }
+}
+.link-container:focus .hover-text,
+.link-container:hover .hover-text {
+  opacity: 1;
+}
+
+.section--carousel-hero .svg-cutout {
+  stroke: var(--clr-black);
+  stroke-width: 4px;
+}
+
+@media (max-width: 767px) {
+  .section--carousel-hero .svg-cutout {
+    stroke-width: 8;
+  }
+}
+
+.snippet--cutout-image .svg-cutout {
+  display: block;
+  height: auto;
+  width: 100%;
+}

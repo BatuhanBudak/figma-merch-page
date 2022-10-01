@@ -3,11 +3,13 @@ import useToggle from "../../hooks/useToggle";
 import NavDrawer from "./NavDrawer";
 import NavMobile from "./NavMobile";
 import NavDesktop from "./NavDesktop";
+import NavInner from "./NavInner";
 
 export default function Header() {
   const [drawerOpen, toggleDrawer] = useToggle();
   const [lastScrollY, setLastScrollY] = useState(0);
   const [input, setInput] = useState("");
+  const [searchOpen, toggleSearch] = useToggle();
   const currentScroll = useRef(0);
 
   useEffect(() => {
@@ -47,7 +49,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="search">
+        <div className={`${searchOpen ? "search-open" : ""} search-container`}>
           <form className="search-form">
             <input
               name="search"
@@ -62,8 +64,11 @@ export default function Header() {
           </form>
         </div>
         <nav className={`nav ${drawerOpen ? "drawer-open" : ""}`}>
-          <NavMobile toggleDrawer={toggleDrawer} drawerOpen={drawerOpen} />
-          <NavDesktop />
+          <NavInner
+            toggleDrawer={toggleDrawer}
+            drawerOpen={drawerOpen}
+            toggleSearch={toggleSearch}
+          />
           <NavDrawer drawerOpen={drawerOpen} />
         </nav>
       </div>

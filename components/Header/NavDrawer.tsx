@@ -9,49 +9,27 @@ export default function NavDrawer({ drawerOpen }) {
       <ul className="nav__drawer__list" id="mobile-nav-primary">
         <li className="nav__drawer__list__item">
           <a className="nav__drawer__list__item__link" href="">
-            WORK
+            Shop
           </a>
         </li>
         <li className="nav__drawer__list__item">
           <a className="nav__drawer__list__item__link" href="">
-            ABOUT
-          </a>
-        </li>
-        <li className="nav__drawer__list__item">
-          <a className="nav__drawer__list__item__link" href="">
-            NEWS
-          </a>
-        </li>
-        <li className="nav__drawer__list__item">
-          <a className="nav__drawer__list__item__link" href="">
-            THINKING
-          </a>
-        </li>
-        <li className="nav__drawer__list__item">
-          <a className="nav__drawer__list__item__link" href="">
-            PLEDGE
-          </a>
-        </li>
-        <li className="nav__drawer__list__item">
-          <a className="nav__drawer__list__item__link" href="">
-            CAREERS
-          </a>
-        </li>
-        <li className="nav__drawer__list__item">
-          <a className="nav__drawer__list__item__link" href="">
-            CONTACT
-          </a>
-        </li>
-        <li className="nav__drawer__list__item">
-          <a className="nav__drawer__list__item__link" href="">
-            INITIATIVES
+            About
           </a>
         </li>
       </ul>
-      <div className="nav__drawer__copyright meta">
-        <span>BASIC/DEPT®, inc</span>
-        <span>10 - 22©</span>
-      </div>
+      <ul className="nav__drawer__list__secondary">
+        <li className="">
+          <a href="" className="nav__drawer__list__secondary__link">
+            Privacy &amp; Terms
+          </a>
+        </li>
+        <li className="">
+          <a className="nav__drawer__list__secondary__link" href="">
+            Contact Us
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }

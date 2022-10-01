@@ -13,7 +13,8 @@ export default function NavMobile({ toggleDrawer, drawerOpen }) {
           toggleDrawer();
         }}
       >
-        Menu
+        <span className="hamburger"></span>
+        <span className="sr-only">Menu</span>
       </button>
     </div>
   );
