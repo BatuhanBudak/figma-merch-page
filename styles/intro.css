@@ -1,0 +1,99 @@
+.section--symbol-text {
+  padding: 150px 0 50px;
+}
+
+@media (max-width: 767px) {
+  .section--symbol-text {
+    padding: 80px 0 0;
+  }
+}
+
+.contained {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+h1,
+h2,
+h3,
+h4,
+section.gift-card .card-price {
+  font-weight: 400;
+  margin: 0;
+}
+
+.h2,
+h2,
+section.gift-card .card-price {
+  font-family: var(--ff-third);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .h2,
+  h2,
+  section.gift-card .card-price {
+    font-size: 2rem;
+  }
+}
+
+.section--symbol-text .blurb {
+  font-size: 3em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .section--symbol-text .blurb {
+    font-size: 1.5em;
+  }
+}
+
+.section--symbol-text .blurb .word-icon {
+  margin: 0 7px;
+  transform: scale(1.1);
+  vertical-align: sub;
+}
+
+@media (max-width: 767px) {
+  .section--symbol-text .blurb .word-icon {
+    width: 24px;
+  }
+}
+
+.section--symbol-text .blurb .word-components,
+.section--symbol-text .blurb .word-layers {
+  cursor: pointer;
+  position: relative;
+}
+
+.section--symbol-text .blurb .word-components:after,
+.section--symbol-text .blurb .word-layers:after {
+  display: block;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  background: #000;
+  content: "";
+}
+
+@media (max-width: 767px) {
+  .section--symbol-text .blurb .word-components:after,
+  .section--symbol-text .blurb .word-layers:after {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .section--symbol-text .blurb br {
+    display: none;
+  }
+}
