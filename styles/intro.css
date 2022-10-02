@@ -55,16 +55,16 @@ section.gift-card .card-price {
   }
 }
 
-.section--symbol-text .blurb .word-icon {
-  margin: 0 7px;
-  transform: scale(1.1);
-  vertical-align: sub;
-}
-
 @media (max-width: 767px) {
   .section--symbol-text .blurb .word-icon {
     width: 24px;
   }
+}
+
+.section--symbol-text .blurb .word-icon {
+  margin: 0 7px;
+  transform: scale(1.1);
+  vertical-align: middle;
 }
 
 .section--symbol-text .blurb .word-components,

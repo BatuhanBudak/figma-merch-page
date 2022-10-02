@@ -30,8 +30,7 @@ export default function Intro() {
             <Astrix />
             <span className="word"> COLLECTION </span>
             <RedColumn />
-            <span className="word">OF </span>
-            <br />
+            <span className="word">OF</span>{" "}
             <span className="word-layers">LAYERS</span> <RedRectangle />{" "}
             <span className="word">AND </span>
             <GreenShapes />

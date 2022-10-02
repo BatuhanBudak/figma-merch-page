@@ -1,0 +1,97 @@
+.section--product-grid {
+  margin-bottom: 110px;
+  margin-top: 90px;
+}
+
+.section--product-grid .grid-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  column-gap: 15px;
+  row-gap: 40px;
+}
+
+@media (min-width: 767px) {
+  .section--product-grid .grid-wrap {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 60px;
+  }
+}
+
+.section--product-grid .product-block {
+  position: relative;
+}
+
+.section--product-grid .product-block.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.section--product-grid .product-block .image-sizer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 133%;
+}
+
+.section--product-grid .product-block .hover-image,
+.section--product-grid .product-block .hover-pattern,
+.section--product-grid .product-block .image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 35px;
+  object-fit: cover;
+  transition: border-color 0.3s, opacity 0.3s;
+}
+
+.section--product-grid .product-block .hover-image > span,
+.section--product-grid .product-block .hover-pattern > span,
+.section--product-grid .product-block .image > span {
+  border-radius: 35px;
+}
+
+.section--product-grid .product-block .product-link:focus .hover-image,
+.section--product-grid .product-block .product-link:focus .hover-pattern,
+.section--product-grid .product-block .product-link:focus .image,
+.section--product-grid .product-block .product-link:hover .hover-image,
+.section--product-grid .product-block .product-link:hover .hover-pattern,
+.section--product-grid .product-block .product-link:hover .image {
+  border-color: var(--clr-black);
+}
+
+.section--product-grid .product-block .product-link:focus + .sticker-wrapper,
+.section--product-grid .product-block .product-link:focus .hover-image + .image,
+.section--product-grid .product-block .product-link:hover + .sticker-wrapper,
+.section--product-grid
+  .product-block
+  .product-link:hover
+  .hover-image
+  + .image {
+  opacity: 0;
+}
+.section--product-grid .product-block .info {
+  display: flex;
+  font-family: var(--ff-primary);
+  font-size: 1.375rem;
+  justify-content: space-between;
+  margin-top: 15px;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .section--product-grid .product-block .info {
+    font-size: 1rem;
+  }
+}
+
+.section--product-grid .product-block .title {
+  font-weight: 700;
+}
+
+.section--product-grid .product-block .price {
+  margin-left: 10px;
+}

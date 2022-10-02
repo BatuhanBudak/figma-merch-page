@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/header.css";
 import "../styles/carousel.css";
 import "../styles/intro.css";
+import "../styles/products.css";
 
 import type { AppProps } from "next/app";
 

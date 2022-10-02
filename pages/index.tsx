@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Carousel from "../components/Carousel/Carousel";
 import Header from "../components/Header/Header";
 import Intro from "../components/Intro";
+import Products from "../components/Products";
 
 const Home: NextPage = () => {
   return (
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
       <Header />
       <Carousel />
       <Intro />
+      <Products />
     </div>
   );
 };
