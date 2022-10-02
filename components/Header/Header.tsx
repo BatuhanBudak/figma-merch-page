@@ -4,6 +4,7 @@ import NavDrawer from "./NavDrawer";
 import NavMobile from "./NavMobile";
 import NavDesktop from "./NavDesktop";
 import NavInner from "./NavInner";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [drawerOpen, toggleDrawer] = useToggle();
@@ -46,10 +47,24 @@ export default function Header() {
     }
   }, [drawerOpen]);
 
+  const variants = {
+    hidden: {
+      height: 0,
+    },
+    visible: {
+      height: "auto",
+    },
+  };
+
   return (
     <header className="header">
       <div className="container">
-        <div className={`${searchOpen ? "search-open" : ""} search-container`}>
+        <motion.div
+          className={`${searchOpen ? "search-open" : ""} search-container`}
+          variants={variants}
+          animate={searchOpen ? "visible" : "hidden"}
+          transition={{ duration: 0 }}
+        >
           <form className="search-form">
             <input
               name="search"
@@ -62,7 +77,7 @@ export default function Header() {
               }}
             />
           </form>
-        </div>
+        </motion.div>
         <nav className={`nav ${drawerOpen ? "drawer-open" : ""}`}>
           <NavInner
             toggleDrawer={toggleDrawer}
