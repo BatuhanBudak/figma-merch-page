@@ -13,7 +13,7 @@
 
 /* the slides */
 .slick-slide {
-  padding-left: 10px;
+  padding-left: 15px;
   user-select: none;
 }
 
@@ -72,4 +72,69 @@
   display: block;
   height: auto;
   width: 100%;
+}
+
+.section--carousel-hero .donation-badge-link {
+  position: absolute;
+  bottom: -90px;
+  right: calc(50vw - 620px);
+}
+@media (max-width: 1250px) {
+  .section--carousel-hero .donation-badge-link {
+    right: var(--container-padding);
+  }
+}
+@media (max-width: 767px) {
+  .section--carousel-hero .donation-badge-link {
+    bottom: -60px;
+  }
+}
+@media (max-width: 767px) {
+  .section--carousel-hero .donation-badge-link .badge {
+    height: 120px;
+    width: 120px;
+  }
+}
+.animation--rotate {
+  animation: rotate 10s linear 0s infinite;
+  transform-origin: center center;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.badge .hand {
+  transform: translateX(12px);
+  transition: transform 0.3s ease;
+}
+.badge:hover .hand {
+  transform: translateX(-5px);
+}
+
+.badge .highfive {
+  opacity: 0;
+  transform: translateX(15px) scale(0.9);
+  transform-origin: center bottom;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.badge:hover .highfive {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.badge .sparks {
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: center center;
+  transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+}
+
+.badge:hover .sparks {
+  opacity: 1;
+  transform: scale(1);
 }

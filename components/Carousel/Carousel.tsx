@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import range from "lodash/range";
 import { useRef } from "react";
 import { caroseulSvgs } from "./CarouselSvg";
+import { DonationBadge } from "../Icon";
 
 export default class Carousel extends Component {
   render() {
@@ -25,34 +26,29 @@ export default class Carousel extends Component {
       easing: "ease",
       initialSlide: 1,
       centerMode: true,
-      centerPadding: 0,
       responsive: [
         {
           breakpoint: 3000,
           settings: {
-            slidesToShow: 3.25,
-            initialSlide: 0,
+            slidesToShow: 3.5,
           },
         },
         {
           breakpoint: 2000,
           settings: {
             slidesToShow: 2.75,
-            initialSlide: 0,
           },
         },
         {
           breakpoint: 1500,
           settings: {
-            slidesToShow: 1.8,
-            initialSlide: 0,
+            slidesToShow: 2,
           },
         },
         {
           breakpoint: 788,
           settings: {
             slidesToShow: 1.25,
-            initialSlide: 1,
           },
         },
       ],
@@ -71,6 +67,9 @@ export default class Carousel extends Component {
       <section className="shopify-section shopify-section--carousel-hero">
         <div className="section--carousel-hero">
           <Slider {...settings}>{caroseulItems}</Slider>
+          <a href="" className="donation-badge-link">
+            <DonationBadge />
+          </a>
         </div>
       </section>
     );

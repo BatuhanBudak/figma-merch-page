@@ -8,6 +8,15 @@
   z-index: 5;
 }
 
+.scroll-down .header {
+  transform: translateY(-100%);
+}
+.scroll-up .header {
+  transform: translateY(0);
+  background-color: rgb(255, 255, 255);
+  transition: background-color 0.3s ease backwards;
+}
+
 .header .container {
   background-color: transparent;
   transition: background-color 0.3s linear;
@@ -66,15 +75,6 @@ header .search-open .search-field::placeholder {
   opacity: 1;
   font-weight: 700;
   color: black;
-}
-
-.scroll-down .header {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-.scroll-up .header {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .nav {
