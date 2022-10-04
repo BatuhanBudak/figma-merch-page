@@ -42,7 +42,7 @@
   --clr-white: #fff;
   --clr-red: #f24e1e;
   --clr-green: #0fa958;
-  --clr-yellow: #ffc700;
+  --clr-yellow: rgb(255, 199, 0);
   --clr-purple: #c7b9ff;
   --max-width: 1280px;
   --container-padding: 20px;
@@ -108,6 +108,21 @@ body {
   color: var(--clr-black);
   line-height: 1;
   font-size: 18px;
+}
+
+.h3,
+h3 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.23;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .h3,
+  h3 {
+    font-size: 1.0625rem;
+  }
 }
 
 .nav-open {

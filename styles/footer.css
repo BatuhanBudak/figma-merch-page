@@ -1,0 +1,155 @@
+.shopify-section-footer {
+  background-color: var(--clr-yellow);
+  padding-top: 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: auto 2fr 1fr auto;
+  column-gap: 60px;
+  row-gap: 40px;
+}
+@media (max-width: 767px) {
+  .footer-container {
+    grid-template-columns: 2fr 1fr auto;
+    column-gap: 20px;
+  }
+}
+
+.snippet--variable-logo {
+  grid-row: span 2;
+  margin: 0 60px;
+}
+
+@media (max-width: 767px) {
+  .snippet--variable-logo {
+    grid-column: span 3;
+    grid-row: initial;
+  }
+}
+
+@media (max-width: 767px) {
+  .snippet--variable-logo svg {
+    height: auto;
+    margin: 0 auto;
+    max-width: 280px;
+    width: 100%;
+  }
+}
+
+.text {
+  font-size: 2rem;
+}
+
+@media (max-width: 767px) {
+  .text {
+    font-size: 2.25rem;
+    grid-column: span 2;
+  }
+}
+
+.footer-secondary {
+  grid-column: span 2;
+}
+
+@media (max-width: 767px) {
+  .footer-secondary {
+    grid-column: initial;
+  }
+}
+
+.secondary-link {
+  font-size: 0.875em;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s;
+}
+
+.footer-secondary li:not(:first-child) {
+  margin-top: 20px;
+}
+
+.footer-socials {
+  grid-column: span 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer-socials {
+    align-self: unset;
+    flex-direction: column;
+    grid-column: 2 / span 2;
+  }
+}
+
+.social-link {
+  font-weight: 400;
+  text-decoration: underline;
+  transition: text-decoration-color 0.3s;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s;
+}
+
+.scroll-up {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .scroll-up {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .scroll-up .arrow-up {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.footer-ticker {
+  display: flex;
+  max-width: 100vw;
+  margin-top: 60px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  .footer-ticker {
+    font-size: 1.625rem;
+  }
+}
+
+.footer-ticker .tape {
+  animation: marquee 15s linear infinite;
+  white-space: nowrap;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.footer-ticker .word {
+  line-height: 1;
+}
+
+.footer-ticker .snippet--ticker-shape {
+  margin: auto 10px;
+}
