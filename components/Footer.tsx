@@ -15,8 +15,8 @@ import { footerLogos } from "./FooterLogos";
 
 export default function Footer() {
   const [logoIndex, setLogoIndex] = useState(getRandomLogoIndex);
-  const [footerLogo, setFooterLogos] = useState();
-  const footerRef = useRef(null);
+  const [footerLogo, setFooterLogos] = useState<JSX.Element>();
+  const footerRef = useRef<HTMLElement>(null);
   const bgColor = useRef("");
 
   function getRandomLogoIndex() {

@@ -1,4 +1,4 @@
-export default function NavDrawer({ drawerOpen }) {
+export default function NavDrawer({ drawerOpen }: { drawerOpen: boolean }) {
   return (
     <div
       className="nav__drawer"

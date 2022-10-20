@@ -14,9 +14,11 @@
 .scroll-up .header {
   transform: translateY(0);
   background-color: rgb(255, 255, 255);
-  transition: background-color 0.3s ease backwards;
+  transition: background-color 0.3s ease;
 }
-
+.nav-open .header {
+  background-color: white;
+}
 .header .container {
   background-color: transparent;
   transition: background-color 0.3s linear;
@@ -344,10 +346,9 @@ header .search-open .search-field::placeholder {
     margin-top: 4rem;
     transform: translateY(-100%);
     visibility: hidden;
-    z-index: var(--z-menu);
-    color: var(--clr-azalea);
-    background-color: var(--clr-tuatara);
-    transition: transform 0s linear 0.25s, visibility 0s linear 0.25s;
+    color: inherit;
+    background-color: white;
+    transition: transform 0.25s linear 0s, visibility 0s linear 0.3s;
     pointer-events: none;
   }
 
@@ -355,7 +356,7 @@ header .search-open .search-field::placeholder {
     pointer-events: all;
     transform: translateY(0);
     visibility: visible;
-    transition: transform 0s linear 0s, visibility 0s linear 0s;
+    transition: transform 0.5s linear 0s, visibility 0s linear 0s;
   }
 
   .nav__drawer__menu {

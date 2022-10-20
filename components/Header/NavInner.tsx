@@ -2,7 +2,17 @@ import React from "react";
 import useToggle from "../../hooks/useToggle";
 import { MapPin, Magnify, FigmaLogo } from "../Icon";
 
-export default function NavInner({ toggleDrawer, drawerOpen, toggleSearch }) {
+type Props = {
+  toggleDrawer: () => void;
+  toggleSearch: () => void;
+  drawerOpen: boolean;
+};
+
+export default function NavInner({
+  toggleDrawer,
+  drawerOpen,
+  toggleSearch,
+}: Props) {
   const [selectOpen, toggleSelect] = useToggle();
 
   return (
