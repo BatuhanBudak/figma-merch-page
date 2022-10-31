@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import range from "lodash/range";
-import { useRef } from "react";
+
 import { caroseulSvgs } from "./CarouselSvg";
 import { DonationBadge } from "../Icon";
 
@@ -54,7 +53,7 @@ export default class Carousel extends Component {
       ],
     };
 
-    const caroseulItems = range(0, 8).map((_, i) => (
+    const caroseulItems = Array.from({ length: 8 }, (v, i) => i).map((_, i) => (
       <div className="link-container" key={i}>
         <a className="side-link" href="">
           <div className="hover-text">{imageText[i]}</div>
